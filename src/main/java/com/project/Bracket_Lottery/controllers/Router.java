@@ -25,14 +25,13 @@ public class Router{
 
 	}
 
-	@RequestMapping("index")
-	public String index(){
-		return "index";
-	}
-
 	@RequestMapping("")
-	public String redirect(HttpServletRequest req){		
+	public String redirect(HttpServletRequest req, HttpSession session){	
 		String url = req.getRequestURI().toString();
-		return "redirect:/index";
+		if(session.getAttribute("id") != null) {
+			return "redirect:/dashboard";
+		}	else {
+		return "redirect:/home";
+		}
 	}		
 }
