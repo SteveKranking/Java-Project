@@ -20,6 +20,8 @@ import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.project.Bracket_Lottery.models.Team;
+
 @Entity
 public class User{
 	@Id
@@ -34,12 +36,21 @@ public class User{
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date updatedAt;
 
+	@Size(min=1, message="Username cannot be blank")
 	private String username;
+	@Size(min=2, message="First Name cannot be blank")
 	private String firstName;
+	@Size(min=2, message="Last Name cannot be blank")
 	private String lastName;
+	@Email(message="Invalid email format! example: example@example.com")
 	private String email;
+	@Size(min=8, message="Password must be at least eight characters")	
 	private String password;
+	@Transient
 	private String confirmPassword;
+
+	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+	private List<Team> teams;
 
 	@PrePersist
 	public void onCreate(){this.createdAt = new Date();}
@@ -143,4 +154,12 @@ public class User{
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
+
+	public List<Team> getTeams() {
+		return teams;
+	}
+	public void setTeams(List<Team> teams) {
+		this.teams = teams;
+	}
+
 }
