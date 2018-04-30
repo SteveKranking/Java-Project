@@ -81,5 +81,12 @@ public class UserController{
 			}
 		}
 	}
+	
+	@RequestMapping("/dashboard")
+	public String dashboard(HttpSession s) {
+		User user = _us.findById((Long)s.getAttribute("id"));
+	
+		return "dashboard";
+	}
 
 }
