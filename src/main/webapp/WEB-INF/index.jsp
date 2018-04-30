@@ -19,11 +19,32 @@
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-            <a href="#" class="navbar-brand"> Bracket Lottery </a>
+			<a href="#" class="navbar-brand"> Bracket Lottery </a>
+
+			<div class="collapse navbar-collapse justify-content-end">
+				<ul class="navbar-nav">
+					
+						<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/login">
+
+							<input class="homeLogin" id="email" placeholder="Email"name="email"/>
+							<input class="homeLogin" type="password" id="password"  placeholder="Password" name="password"/>
+							<button class="btn btn-primary homeLogin" type="submit" action=""> Login </button>
+						
+						</form>
+
+
+				</ul>
+			</div>
         </nav>
         
-        <br />
-        <br />
+		<br />
+		
+		<div class="container">
+				<p class="display-3"> Bracket Lottery </p>
+				<p class="lead"> A new way to play March Madness. </p>
+		</div>
+		
+
 
         <div class="container">
             <div class="row">
@@ -33,21 +54,27 @@
             </div>
 		</div>
 
-		<div class="container" "index-card-row">
+		<div class="container">
 			<div class="row">
-					<div class="card col-md-3" id="index-card" style="width: 18rem;">
+					<div class="card col-md-2" id="index-card" style="width: 18rem;">
 						<img class="card-img-top" src="https://cdn3.iconfinder.com/data/icons/black-easy/512/535106-user_512x512.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"> <a href="/register"> Sign Up </a> </h5>
+						</div>
+					</div>
+					<div class="card col-md-2" id="index-card" style="width: 18rem;">
+						<img class="card-img-top" src="http://worldartsme.com/images/black-curved-arrow-clipart-1.jpg" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">Join a Game </h5>
 						</div>
 					</div>
-					<div class="card col-md-3" id="index-card" style="width: 18rem;">
+					<div class="card col-md-2" id="index-card" style="width: 18rem;">
 						<img class="card-img-top" src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Bulleted-List-icon.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title"> Get Your Teams </h5>
 						</div>
 					</div>
-					<div class="card col-md-3" id="index-card" style="width: 18rem;">
+					<div class="card col-md-2" id="index-card" style="width: 18rem;">
 						<img class="card-img-top" src="http://www.clipartpanda.com/clipart_images/money-clipart-black-and-white-41001643/download" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title"> Win Prizes! </h5>
