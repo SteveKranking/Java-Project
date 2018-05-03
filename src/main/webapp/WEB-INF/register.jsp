@@ -20,45 +20,36 @@
 
 		<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
 			<a href="#" class="navbar-brand"> Bracket Lottery </a>
-		</nav>
 
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-				<h1 class="display-1"> Bracket Lottery </h1>
-				<p class="lead"> A new way to play March Madness.</p>
+			<div class="collapse navbar-collapse justify-content-end">
+				<ul class="navbar-nav">
+					
+						<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/login">
+
+							<input class="homeLogin" id="email" placeholder="Email"name="email"/>
+							<input class="homeLogin" type="password" id="password"  placeholder="Password" name="password"/>
+							<button class="btn btn-primary homeLogin" type="submit" action=""> Login </button>
+						
+						</form>
+
+
+				</ul>
 			</div>
-		</div>
+        </nav>
 
 		<section class="more-space"></section>
+		
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="card-text-center">
-						<div class="card-header">
-							Login
-						</div>
-						<div class="card-body">
+				
+				<div class="col-md-6">
+					
+					<p class="display-3" id="registerLogo"> Probably a Logo </p>
 
-							<form method="POST" class="form-horizontal" action="/login">
-							<p class="card-text">
-								<label for="email">Email</label>
-								<input id="email" name="email"/>
-								
-							</p>
-							<p class="card-text">
-								<label for="password">Password</label>
-								<input type="password" id="password" name="password"/>
-							</p>
-							<input type="submit" value="Login!"/>
-							</form>
-							
-						</div>
+				</div>
 
 
-						</div>
-					</div>
-
-				<div class="col-lg-6">
+				<div class="col-md-6">
 					<div class="card-text-center">
 							<div class="card-header">
 								Register
@@ -107,6 +98,7 @@
 							</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 	</section>
