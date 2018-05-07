@@ -18,7 +18,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+		<nav class="navbar navbar-expand-md navbar-custom bg-custom">
 			<a href="#" class="navbar-brand"> Bracket Lottery </a>
 
 			<div class="collapse navbar-collapse justify-content-end">
@@ -28,7 +28,7 @@
 
 							<input class="homeLogin" id="email" placeholder="Email"name="email"/>
 							<input class="homeLogin" type="password" id="password"  placeholder="Password" name="password"/>
-							<button class="btn btn-primary homeLogin" type="submit" action=""> Login </button>
+							<button class="btn btn-primary homeLogin" type="submit"> Login </button>
 						
 						</form>
 

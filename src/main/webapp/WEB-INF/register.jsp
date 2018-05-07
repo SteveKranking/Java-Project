@@ -28,7 +28,7 @@
 
 							<input class="homeLogin" id="email" placeholder="Email"name="email"/>
 							<input class="homeLogin" type="password" id="password"  placeholder="Password" name="password"/>
-							<button class="btn btn-primary homeLogin" type="submit" action=""> Login </button>
+							<button class="btn btn-primary homeLogin" type="submit"> Login </button>
 						
 						</form>
 
@@ -44,7 +44,7 @@
 				
 				<div class="col-md-6">
 					
-					<p class="display-3" id="registerLogo"> Probably a Logo </p>
+					<p class="display-3" id="registerLogo"> Probably a Logo of some kind </p>
 
 				</div>
 

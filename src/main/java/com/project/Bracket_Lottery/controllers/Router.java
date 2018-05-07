@@ -31,7 +31,7 @@ public class Router{
 		if(session.getAttribute("id") != null) {
 			return "redirect:/dashboard";
 		}	else {
-		return "index";
+		return "redirect:/home";
 		}
 	}		
 }
