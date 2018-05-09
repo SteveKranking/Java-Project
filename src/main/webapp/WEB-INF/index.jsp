@@ -28,7 +28,7 @@
 
 							<input class="homeLogin" id="email" placeholder="Email"name="email"/>
 							<input class="homeLogin" type="password" id="password"  placeholder="Password" name="password"/>
-							<button class="btn btn-primary homeLogin" type="submit"> Login </button>
+							<input class="btn btn-primary homeLogin" type="submit" value="Login"> </button>
 						
 						</form>
 
@@ -44,8 +44,6 @@
 				<p class="lead"> A new way to play March Madness. </p>
 		</div>
 		
-
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

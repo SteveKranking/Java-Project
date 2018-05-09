@@ -66,6 +66,7 @@ public class UserController{
 			return "redirect:/dashboard";
 		}
 	}
+
 	@PostMapping("/login")
 	public String login(@RequestParam("email") String email, @RequestParam("password")String password, HttpSession session){
 		User user = _us.findByEmail(email);
@@ -83,8 +84,9 @@ public class UserController{
 	}
 	
 	@RequestMapping("/dashboard")
-	public String dashboard(HttpSession s) {
+	public String dashboard(HttpSession s, Model model) {
 		User user = _us.findById((Long)s.getAttribute("id"));
+		model.addAttribute("currentUser", user);
 	
 		return "dashboard";
 	}
