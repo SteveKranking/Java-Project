@@ -24,7 +24,7 @@
 				<div class="collapse navbar-collapse justify-content-end">
 					<ul class="navbar-nav">
 						
-						<span class="nav-item"> ${ currentUser.username }</span>
+						<span class="nav-item currentUser"> ${currentUser.username}</span>
 						
 						<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/logout">
 							<button class="btn btn secondary" type="submit"> Logout </button>
