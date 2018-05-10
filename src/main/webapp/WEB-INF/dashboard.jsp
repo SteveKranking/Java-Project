@@ -24,7 +24,7 @@
 				<div class="collapse navbar-collapse justify-content-end">
 					<ul class="navbar-nav">
 						
-						<span class="nav-item currentUser"> ${currentUser.username}</span>
+						<span class="nav-item currentUser"> <b> ${currentUser.username} </b> </span>
 						
 						<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/logout">
 							<button class="btn btn secondary" type="submit"> Logout </button>
@@ -34,6 +34,14 @@
 				</div>
 			</nav>
 
-		<h1> This is the dashboard. </h1>
+		<div class="container">
+			<div class="row">
+				<div class="more-space">
+					<h1> This is the dashboard. </h1>
+				</div>
+				
+			</div>
+		</div>
+
 	</body>
 </html>

@@ -15,9 +15,6 @@ color: white;
 .navbar-brand {
     color: white;
 }
-section.more-space {
-    padding: 15px 0px;
-}
 
 #indexBracket {
     width: 1000px;
@@ -45,4 +42,8 @@ section.more-space {
 .currentUser {
     padding: 5px;
     margin-right: 7px;
+}
+
+.more-space{
+    padding: 20px;
 }

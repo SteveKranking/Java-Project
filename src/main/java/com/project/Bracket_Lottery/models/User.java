@@ -29,6 +29,14 @@ public class User{
 	private long id;
 
 	// Member variables and annotations go here.
+
+	@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "user_games", 
+        joinColumns = @JoinColumn(name = "user_id"), 
+        inverseJoinColumns = @JoinColumn(name = "game_id")
+    )
+    private List<Game> gamesPlayed;
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
