@@ -28,15 +28,7 @@ public class User{
 	@GeneratedValue
 	private long id;
 
-	// Member variables and annotations go here.
-
-	@ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "user_games", 
-        joinColumns = @JoinColumn(name = "user_id"), 
-        inverseJoinColumns = @JoinColumn(name = "game_id")
-    )
-    private List<Game> gamesPlayed;
+	// Member variables and annotations go here.	
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
@@ -59,6 +51,8 @@ public class User{
 
 	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
 	private List<Team> teams;
+
+	
 
 	@PrePersist
 	public void onCreate(){this.createdAt = new Date();}

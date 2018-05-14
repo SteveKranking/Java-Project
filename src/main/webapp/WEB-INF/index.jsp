@@ -40,8 +40,8 @@
 		<br />
 		
 		<div class="container">
-				<p class="display-3"> Bracket Lottery </p>
-				<p class="lead"> A new way to play March Madness. </p>
+				<h1 class="display-3"> Bracket Lottery </h1>
+				<h1 class="lead"> A new way to play March Madness. </h1>
 		</div>
 		
         <div class="container">

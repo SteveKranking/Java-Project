@@ -30,13 +30,7 @@ public class Game{
 	@GeneratedValue
 	private long id;
 
-	@ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "users_games", 
-        joinColumns = @JoinColumn(name = "user_id"), 
-        inverseJoinColumns = @JoinColumn(name = "game_id")
-    )
-	private List<User> likes;
+	private User winner;
 	
 	// Member variables and annotations go here.
 	
@@ -75,5 +69,18 @@ public class Game{
 	public Game(){
 		this.createdAt = new Date();
 		this.updatedAt = new Date();
+	}
+
+	/**
+	 * @return the winner
+	 */
+	public User getWinner() {
+		return winner;
+	}
+	/**
+	 * @param winner the winner to set
+	 */
+	public void setWinner(User winner) {
+		this.winner = winner;
 	}
 }
