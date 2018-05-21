@@ -21,6 +21,7 @@ import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.project.Bracket_Lottery.models.Team;
+import com.project.Bracket_Lottery.models.Game;
 
 @Entity
 public class User{

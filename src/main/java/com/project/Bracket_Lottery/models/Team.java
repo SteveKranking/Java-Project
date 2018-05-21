@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.project.Bracket_Lottery.models.User;
-
+import com.project.Bracket_Lottery.models.Game;
 
 @Entity
 public class Team{

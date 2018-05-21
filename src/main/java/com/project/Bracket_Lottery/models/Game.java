@@ -16,6 +16,7 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
+import org.apache.taglibs.standard.lang.jstl.test.beans.PublicBean1b;
 import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,8 +30,6 @@ public class Game{
 	@Id
 	@GeneratedValue
 	private long id;
-
-	private User winner;
 	
 	// Member variables and annotations go here.
 	
@@ -71,16 +70,4 @@ public class Game{
 		this.updatedAt = new Date();
 	}
 
-	/**
-	 * @return the winner
-	 */
-	public User getWinner() {
-		return winner;
-	}
-	/**
-	 * @param winner the winner to set
-	 */
-	public void setWinner(User winner) {
-		this.winner = winner;
-	}
 }
