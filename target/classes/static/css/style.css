@@ -51,3 +51,7 @@ color: white;
 tr, td {
     padding: 5px;
 }
+
+.registerTag {
+    text-align: center;
+}

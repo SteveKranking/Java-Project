@@ -38,7 +38,17 @@
         </nav>
 
 		<section class="more-space"></section>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="registerTag"> Start Winning Today! </h1>
+				</div>
+			</div>
+		</div>
 		
+		<section class="more-space"></section>
+
 		<div class="container">
 			<div class="row">
 				
