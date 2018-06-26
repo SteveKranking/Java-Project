@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-    				<img id="indexBracket" src="https://vignette.wikia.nocookie.net/ssb/images/f/f8/BRACKET.jpg/revision/latest?cb=20150220191555"> 
+    				<img id="indexBracket" src="https://img.clipartxtras.com/43a4d4cb0c792a4e67147e58234ab20f_tournament-bracket-icon-sport-games-icons-in-svg-and-png-tournament-bracket-clipart_512-512.png"> 
                 </div>
             </div>
 		</div>

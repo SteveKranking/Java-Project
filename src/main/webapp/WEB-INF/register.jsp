@@ -19,7 +19,7 @@
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-			<a href="#" class="navbar-brand"> Bracket Lottery </a>
+			<a href="/index" class="navbar-brand"> Bracket Lottery </a>
 
 			<div class="collapse navbar-collapse justify-content-end">
 				<ul class="navbar-nav">
@@ -56,40 +56,39 @@
 							</div>
 							<div class="card-body">
 								<form:form method="POST" class="form-horizontal" action="/register" modelAttribute="user">
-								<p class="card-text">
-								<form:label path="username"> Username:</form:label>
-								<form:input path="username"/>
-								<form:errors path="username"></form:errors>
-								</p>
-								<p class="card-text">
-								<form:label path="firstName">First Name:
-								<form:errors path="firstName"></form:errors>
-								</form:label>
-								<form:input path="firstName"/>
-								</p>
-								<p class="card-text">
-								<form:label path="lastName">Last Name:</form:label>
-								<form:errors path="lastName"></form:errors>
-								<form:input path="lastName"/>
-								</p>
-								<p class="card-text">
-								<form:label path="email">Email:
-								<form:errors path="Email"></form:errors>
-								</form:label>
-								<form:input path="email"/>
-								</p>
-								<p class="card-text">
-								<form:label path="password">Password:
-								<form:errors path="password"></form:errors>
-								</form:label>
 
-								<form:password path="password"/>
-								</p>
-								<p class="card-text">
-								<form:label path="confirmPassword">Password Confirmation:</form:label>
-								<form:password path="confirmPassword"/>
-								<form:errors path="confirmPassword"></form:errors>
-								</p>
+									<table>
+										<tr>
+											<td><form:label path="username"> Username:</form:label></td>
+											<td><form:input path="username"/></td>
+											<td><form:errors path="username"></form:errors></td>
+										</tr>
+										<tr>
+											<td><form:label path="firstName"> First Name:</form:label></td>
+											<td><form:input path="firstName"/></td>
+											<td><form:errors path="firstName"></form:errors></td>
+										</tr>
+										<tr>
+											<td><form:label path="lastName"> Last Name:</form:label></td>
+											<td><form:input path="lastName"/></td>
+											<td><form:errors path="lastName"></form:errors></td>
+										</tr>
+										<tr>
+											<td><form:label path="email"> Email:</form:label></td>
+											<td><form:input path="email"/></td>
+											<td><form:errors path="email"></form:errors></td>
+										</tr>
+										<tr>
+											<td><form:label path="password"> Password:</form:label></td>
+											<td><form:input path="password"/></td>
+											<td><form:errors path="password"></form:errors></td>
+										</tr>
+										<tr>
+											<td><form:label path="confirmPassword"> Confirm Password:</form:label></td>
+											<td><form:input path="confirmPassword"/></td>
+											<td><form:errors path="confirmPassword"></form:errors></td>
+										</tr>
+									</table>
 
 								<p class="card-text"><form:errors path="user.*"/></p>
 								<input type="submit" value="Register!"/>
