@@ -32,11 +32,14 @@ public class Team{
 
 	private int seed;
 	private String name;
+	private int score;
 
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
 	private User user;
 	// Member variables and annotations go here.
+
+	
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
@@ -105,5 +108,17 @@ public class Team{
 
 	public User getUser() {
 		return user;
+	}
+	/**
+	 * @return the score
+	 */
+	public int getScore() {
+		return score;
+	}
+	/**
+	 * @param score the score to set
+	 */
+	public void setScore(int score) {
+		this.score = score;
 	}
 }

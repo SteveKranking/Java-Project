@@ -40,7 +40,7 @@
 		<br />
 		
 		<div class="container">
-				<h1 class="display-3"> Bracket Lottery </h1>
+				<h1 class="display-3"> <strong> Bracket Lottery </strong> </h1>
 				<h1 class="lead"> A new way to play March Madness. </h1>
 		</div>
 		

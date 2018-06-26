@@ -51,7 +51,15 @@ public class User{
 	private String confirmPassword;
 
 	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-	private List<Team> teams;
+	private List<Team> usersTeams;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "users_games", 
+        joinColumns = @JoinColumn(name = "user_id"), 
+        inverseJoinColumns = @JoinColumn(name = "game_id")
+    )
+    private List<Game> usersGames;
 
 	
 
@@ -158,11 +166,18 @@ public class User{
 		this.confirmPassword = confirmPassword;
 	}
 
-	public List<Team> getTeams() {
-		return teams;
+	public List<Team> getUsersTeams() {
+		return usersTeams;
 	}
-	public void setTeams(List<Team> teams) {
-		this.teams = teams;
+	public void setUsersTeams(List<Team> usersTeams) {
+		this.usersTeams = usersTeams;
+	}
+
+	public List<Game> getUsersGames() {
+		return usersGames;
+	}
+	public void setUsersGames(List<Game> usersGames) {
+		this.usersGames = usersGames;
 	}
 
 }

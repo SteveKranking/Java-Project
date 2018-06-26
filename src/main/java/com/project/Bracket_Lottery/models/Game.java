@@ -31,6 +31,22 @@ public class Game{
 	@GeneratedValue
 	private long id;
 	
+	@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "users_games", 
+        joinColumns = @JoinColumn(name = "game_id"), 
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+	private List<User> players;
+	
+	// @ManyToMany(fetch = FetchType.LAZY)
+    // @JoinTable(
+    //     name = "teams_games", 
+    //     joinColumns = @JoinColumn(name = "game_id"), 
+    //     inverseJoinColumns = @JoinColumn(name = "team_id")
+    // )
+    // private List<Team> teams;
+	
 	// Member variables and annotations go here.
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
@@ -69,5 +85,19 @@ public class Game{
 		this.createdAt = new Date();
 		this.updatedAt = new Date();
 	}
+
+	public List<User> getPlayers() {
+		return players;
+	}
+	public void setPlayers(List<User> players) {
+		this.players = players;
+	}
+
+	// public List<Team> getTeams() {
+	// 	return teams;
+	// }
+	// public void setTeams(List<Team> teams) {
+	// 	this.teams = teams;
+	// }
 
 }
