@@ -37,12 +37,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="more-space">
-					<h1> This is the dashboard. </h1>
-					<h1> It will simply display the games available for users to join</h1>
-					<h1> and also display the games a user is currently in.</h1>
-					<h1> Maybe at the bottom it could show a users previous games and results, </h1>
-					<h1> but that could also be displayed in a users account info.</h1>
-
+                    <h1> This is the game page. </h1>
+                    <h1> It's going to need a fully functioning bracket </h1>
+                    <h1> that shows all the teams, scores, and update throughout the tournament. </h1>
 				</div>
 				
 			</div>
