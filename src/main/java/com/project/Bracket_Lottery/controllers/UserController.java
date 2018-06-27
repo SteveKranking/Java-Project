@@ -91,4 +91,12 @@ public class UserController{
 		return "dashboard";
 	}
 
+	@RequestMapping("/gamepage")
+	public String gamepage(HttpSession s, Model model) {
+		User user = _us.findById((Long)s.getAttribute("id"));
+		model.addAttribute("currentUser", user);
+	
+		return "gamepage";
+	}
+
 }
