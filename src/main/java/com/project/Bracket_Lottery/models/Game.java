@@ -1,5 +1,6 @@
 package com.project.Bracket_Lottery.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,6 +31,9 @@ public class Game{
 	@Id
 	@GeneratedValue
 	private long id;
+
+	private int maxPlayers;
+	private ArrayList<User> winners;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -92,6 +96,31 @@ public class Game{
 	public void setPlayers(List<User> players) {
 		this.players = players;
 	}
+	/**
+	 * @return the maxPlayers
+	 */
+	public int getMaxPlayers() {
+		return maxPlayers;
+	}
+	/**
+	 * @param maxPlayers the maxPlayers to set
+	 */
+	public void setMaxPlayers(int maxPlayers) {
+		this.maxPlayers = maxPlayers;
+	}
+	/**
+	 * @return the winners
+	 */
+	public ArrayList<User> getWinners() {
+		return winners;
+	}
+	/**
+	 * @param winners the winners to set
+	 */
+	public void setWinners(ArrayList<User> winners) {
+		this.winners = winners;
+	}
+
 
 	// public List<Team> getTeams() {
 	// 	return teams;
