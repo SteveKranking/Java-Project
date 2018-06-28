@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.project.Bracket_Lottery.models.Team;
 import com.project.Bracket_Lottery.models.User;
+import com.project.Bracket_Lottery.repositories.TeamRepository;
 import com.project.Bracket_Lottery.repositories.UserRepository;
 import com.project.Bracket_Lottery.services.UserService;
 import com.project.Bracket_Lottery.validators.UserValidator;
@@ -29,10 +31,12 @@ import com.project.Bracket_Lottery.validators.UserValidator;
 public class UserController{
 	private UserService _us;
 	private UserValidator _uv;
+	private TeamRepository _tr;
 
-	public UserController(UserService _us, UserValidator _uv){
+	public UserController(UserService _us, UserValidator _uv, TeamRepository _tr){
 		this._us = _us;
 		this._uv = _uv;
+		this._tr = _tr;
 
 
 	}
@@ -88,6 +92,10 @@ public class UserController{
 		User user = _us.findById((Long)s.getAttribute("id"));
 		model.addAttribute("currentUser", user);
 	
+		List<Team> allTeams = (List<Team>) _tr.findAll();
+		model.addAttribute("allTeams", allTeams);
+		System.out.println(allTeams);
+
 		return "dashboard";
 	}
 
