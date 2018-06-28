@@ -91,10 +91,6 @@ public class UserController{
 	public String dashboard(HttpSession s, Model model) {
 		User user = _us.findById((Long)s.getAttribute("id"));
 		model.addAttribute("currentUser", user);
-	
-		List<Team> allTeams = (List<Team>) _tr.findAll();
-		model.addAttribute("allTeams", allTeams);
-		System.out.println(allTeams);
 
 		return "dashboard";
 	}
@@ -103,6 +99,10 @@ public class UserController{
 	public String gamepage(HttpSession s, Model model) {
 		User user = _us.findById((Long)s.getAttribute("id"));
 		model.addAttribute("currentUser", user);
+
+		List<Team> allTeams = (List<Team>) _tr.findAll();
+		model.addAttribute("allTeams", allTeams);
+		System.out.println(allTeams);
 	
 		return "gamepage";
 	}
