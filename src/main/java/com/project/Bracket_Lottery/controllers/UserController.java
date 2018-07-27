@@ -24,7 +24,9 @@ import com.project.Bracket_Lottery.models.Team;
 import com.project.Bracket_Lottery.models.User;
 import com.project.Bracket_Lottery.repositories.TeamRepository;
 import com.project.Bracket_Lottery.repositories.UserRepository;
+import com.project.Bracket_Lottery.repositories.GameRepository;
 import com.project.Bracket_Lottery.services.UserService;
+import com.project.Bracket_Lottery.services.GameService;
 import com.project.Bracket_Lottery.validators.UserValidator;
 
 @Controller
@@ -32,11 +34,15 @@ public class UserController{
 	private UserService _us;
 	private UserValidator _uv;
 	private TeamRepository _tr;
+	private GameService _gs;
+	private GameRepository _gr;
 
-	public UserController(UserService _us, UserValidator _uv, TeamRepository _tr){
+	public UserController(UserService _us, UserValidator _uv, TeamRepository _tr, GameService _gs, GameRepository _gr){
 		this._us = _us;
 		this._uv = _uv;
 		this._tr = _tr;
+		this._gs = _gs;
+		this._gr = _gr;
 
 
 	}
@@ -105,6 +111,46 @@ public class UserController{
 		System.out.println(allTeams);
 	
 		return "gamepage";
+	}
+
+	//Join Games
+	@RequestMapping("/game/{id}/join")
+	public String likePost(@PathVariable("id") long id, HttpSession session) {
+		User currentUser = _us.findById((long) session.getAttribute("id"));
+		
+		_gs.addPlayer(id, currentUser);
+		// _ps.addLike(id, currentUser);
+
+		Game thisGame = _gs.findById(id);
+		// Post thisPost = _ps.findById(id);
+
+		_gr.save(thisGame);
+		// _pr.save(thisPost);
+		
+		System.out.println(thisPost.getNumLikes());
+
+		return "redirect:/dashboard";
+	}
+
+	//Leave Games
+	@RequestMapping("/post/{id}/unjoin")
+	public String unjoin(@PathVariable("id") long post_id, HttpSession s, Model model) {
+		
+		Post post = _ps.findById(post_id);
+
+		User currentUser = _us.findById((Long)s.getAttribute("id"));
+		
+		post.setLiked(false);
+
+		List<User> users = post.getLikes();
+		users.remove(currentUser);
+		
+		post.setLikes(users);
+
+		currentUser.setTotalLikes(currentUser.getTotalLikes() -1);
+		
+		 _ps.update(post);
+		 return "redirect:/dashboard";
 	}
 
 }
