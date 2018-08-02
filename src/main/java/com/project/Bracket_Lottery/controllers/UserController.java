@@ -22,6 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.Bracket_Lottery.models.Team;
 import com.project.Bracket_Lottery.models.User;
+import com.project.Bracket_Lottery.models.Game;
 import com.project.Bracket_Lottery.repositories.TeamRepository;
 import com.project.Bracket_Lottery.repositories.UserRepository;
 import com.project.Bracket_Lottery.repositories.GameRepository;
@@ -127,29 +128,21 @@ public class UserController{
 		_gr.save(thisGame);
 		// _pr.save(thisPost);
 		
-		System.out.println(thisPost.getNumLikes());
-
 		return "redirect:/dashboard";
 	}
 
 	//Leave Games
-	@RequestMapping("/post/{id}/unjoin")
+	@RequestMapping("/game/{id}/unjoin")
 	public String unjoin(@PathVariable("id") long post_id, HttpSession s, Model model) {
 		
-		Post post = _ps.findById(post_id);
+		Game game = _gs.findById(post_id);
 
 		User currentUser = _us.findById((Long)s.getAttribute("id"));
 		
-		post.setLiked(false);
-
-		List<User> users = post.getLikes();
+		List<User> users = game.getPlayers();
 		users.remove(currentUser);
 		
-		post.setLikes(users);
-
-		currentUser.setTotalLikes(currentUser.getTotalLikes() -1);
-		
-		 _ps.update(post);
+		 _gs.update(game);
 		 return "redirect:/dashboard";
 	}
 

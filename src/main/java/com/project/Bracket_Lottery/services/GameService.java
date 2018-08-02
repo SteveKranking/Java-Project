@@ -21,6 +21,7 @@ public class GameService {
 	public GameService(GameRepository _gr){
 
 		this._gr = _gr;
+	}
 
 		public void addPlayer(Long id, User user) {
 			Game thisGame = _gr.findOne(id);
@@ -33,7 +34,13 @@ public class GameService {
 			_gr.save(thisGame);
 		}
 
-	}
+		public Game findById(Long id){
+			return (Game) _gr.findOne(id);
+		}
+
+		public void update(Game game) {
+			_gr.save(game);
+		}
 	
 	// Crud methods to act on services go here.
 }
