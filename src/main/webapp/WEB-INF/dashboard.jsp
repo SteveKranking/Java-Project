@@ -39,6 +39,10 @@
 				<div class="more-space">
 					<h1> This is the dashboard. </h1>
 					<h1> It will simply display the games available for users to join</h1>
+
+					<p> List of Games </p>
+					<p> </p> <button class="btn btn-primary" type="submit" method="/game/${thisGame.id}/join"> Join Game </button>
+
 					<h1> and also display the games a user is currently in.</h1>
 					<h1> Maybe at the bottom it could show a users previous games and results, </h1>
 					<h1> but that could also be displayed in a users account info.</h1>

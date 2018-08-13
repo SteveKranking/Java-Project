@@ -18,21 +18,21 @@
 
 	<body>
 
-			<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-				<a href="/dashboard" class="navbar-brand"> Bracket Lottery </a>
-	
-				<div class="collapse navbar-collapse justify-content-end">
-					<ul class="navbar-nav">
-						
-						<span class="nav-item currentUser"> <b> ${currentUser.username} </b> </span>
-						
-						<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/logout">
-							<button class="btn btn secondary" type="submit"> Logout </button>
-						</form>
-	
-					</ul>
-				</div>
-			</nav>
+		<nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+			<a href="/dashboard" class="navbar-brand"> Bracket Lottery </a>
+
+			<div class="collapse navbar-collapse justify-content-end">
+				<ul class="navbar-nav">
+					
+					<span class="nav-item currentUser"> <b> ${currentUser.username} </b> </span>
+					
+					<form class="form-inline my-2 my-lg-0 justify-content-end" method="POST" action="/logout">
+						<button class="btn btn secondary" type="submit"> Logout </button>
+					</form>
+
+				</ul>
+			</div>
+		</nav>
 
 		<div class="container">
 			<div class="row">
@@ -53,10 +53,7 @@
                         </c:forEach>
                 </div>
             </div>
-        </div>
-
-
-
-
+		</div>
+		
 	</body>
 </html>
